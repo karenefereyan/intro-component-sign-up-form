@@ -41,7 +41,7 @@ body{
     margin-top: 1.25rem;
 }
 
-.form-div button:first-child{
+.form-div button.free-trial{
     background-color: var(--accent);
     padding: 1.5rem 1rem;
     color: #fff;
@@ -56,11 +56,11 @@ body{
    
 }
 
-.form-div button:first-child span{
+.form-div button.free-trial span{
     font-weight: 600;
 }
 
-form{
+#form{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -68,43 +68,82 @@ form{
     background: #fff;
     border-radius: 10px;
     margin: 0 auto;
+}
+
+#form p.terms{
+    color: var(--grayish-blue);
+    margin-top: 1.5rem;
+    font-weight: 700;
+    font-size: .95rem;
+}
+
+#form p.terms span{
+    color: var(--red);
+}
+
+.form-field{
+    display: flex;
+    flex-direction: column;
     position: relative;
 }
 
-form input{
+.form-field input{
     padding: 1.25rem 1rem;
     border-radius: 10px;
     border: .5px solid var(--dark-blue);
     font-size: .85em;
 }
 
-form img.error{
-    position: absolute;
-    top: 3.5rem;
-    right: 40px;
-    display: none;
-}
-
-form img.error{
-    display: block;
-}
-
-form input:focus{
+.form-field input:focus{
     border-width: 1px;
     outline: none;
     border: solid var(--accent);
 }
 
-form input::placeholder{
+.form-field input::placeholder{
     color: var(--dark-blue);
     font-weight: 600;
 }
 
-form input:not(:last-child){
+.form-field input:not(:last-child){
     margin-top: 1.5rem;
 }
 
-form button{
+.form-field img{
+    display: none;
+    position: absolute;
+    top: 2.5rem;
+    right: 1rem;
+}
+
+.form-field .example{
+    position: absolute;
+    color: var(--red);
+    top: 2.5rem;
+    left: .75rem;
+    display: none;
+}
+
+.form-field.emailedExample .example{
+    display: block;
+}
+
+.form-field small{
+    color: var(--red);
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.form-field.error input{
+    border: 1px solid var(--red);
+}
+
+.form-field.error img{
+    display: block;
+}
+
+.form-field #submit{
     background:var(--green);
     color: #fff;
     text-transform: uppercase;
@@ -112,22 +151,12 @@ form button{
     border-radius: 10px;
     margin-top: 1.75rem;
     border: none;
+    width: 100%;
     font-weight: 600;
 }
 
-form button:hover{
+.form-field #submit:hover{
     cursor:pointer;
-}
-
-form small{
-    color: var(--grayish-blue);
-    margin-top: 1.5rem;
-    font-weight: 700;
-    font-size: .95rem;
-}
-
-form small span{
-    color: var(--red);
 }
 
 .attribution { 
@@ -145,6 +174,7 @@ form small span{
     body{
         background-image: url("/images/bg-intro-desktop.png");
     }
+
     .container{
         display: flex;
         justify-content: space-between;
@@ -166,7 +196,7 @@ form small span{
         padding:5rem 0;
     }
 
-    .form-div button:first-child{
+    .form-div button.free-trial{
         padding: 1.5rem 1rem;
         color: #fff;
         width: 80%;
@@ -174,12 +204,12 @@ form small span{
         justify-content: center;
     }
 
-    form{
+    #form{
         width:80%;
         padding: 2.5rem 1.75rem;
     }
 
-    form small{
+    #form .terms{
         text-align: center;
     }
 }

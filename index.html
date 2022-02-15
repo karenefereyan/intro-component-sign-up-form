@@ -26,23 +26,44 @@
     </div>
 
     <div class="form-div">
-      <button>
+      <button class="free-trial">
         <span> Try it free 7 days </span> &nbsp;then $20/mo. thereafter
       </button>
     
       <form id="form">
-        <input type="text" name="fName" id="fname" placeholder=" First Name ">
-        <input type="text" name="lName" id="lname" placeholder=" Last Name ">
-        <input type="text" name="Email" id="email" placeholder=" Email Address ">
-        <input type="text" name="pWord" id="pword" placeholder=" Password">
-        <button type="submit" id = "submit">claim your free trial</button>
+        <div class="form-field">
+          <input type="text" name="fName" id="fname" placeholder="First Name">
+          <img src="./images/icon-error.svg" alt="error">
+          <small></small>
+        </div>
 
-        <small>email@example/com</small>
-        <img src="./images/icon-error.svg" alt="error" class="error">
+        <div class="form-field">
+          <input type="text" name="lName" id="lname" placeholder=" Last Name ">
+          <img src="./images/icon-error.svg" alt="error">
+          <small></small>
+        </div>
+       
+        <div class="form-field">
+          <input type="email" name="Email" id="email" placeholder=" Email Address ">
+          <img src="./images/icon-error.svg" alt="error">
+          <p class= "example">email@example.com</p>
+          <small></small>
+        </div>
+       
+        <div class="form-field">
+          <input type="password" name="pWord" id="pword" placeholder=" Password">
+          <img src="./images/icon-error.svg" alt="error">
+          <small></small>
+        </div>
+
+        <div class="form-field">
+          <button type="submit" id = "submit">claim your free trial</button>
+        </div>
     
-        <small>
+        <p class="terms">
           By clicking the button, you are agreeing to our <span>Terms and Services</span>
-        </small>
+        </p>
+
       </form>
     </div>
   </div>
