@@ -116,7 +116,7 @@ body{
     right: 1rem;
 }
 
-.form-field .example{
+/* .form-field .example{
     position: absolute;
     color: var(--red);
     top: 2.5rem;
@@ -126,11 +126,15 @@ body{
 
 .form-field.emailedExample .example{
     display: block;
-}
+} */
 
 .form-field small{
     color: var(--red);
     font-weight: 600;
+    display: none;
+}
+
+.form-field.error small{
     display: flex;
     justify-content: flex-end;
 }
